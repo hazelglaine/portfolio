@@ -1,7 +1,26 @@
+:root {
+  --primary-color: #1a2639;
+  --secondary-color: #3e4a61;
+  --accent-color: #c24d2c;
+  --background-color: #d9dad7;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .container {
   max-width: 100%;
 }
 
+.navbar-custom {
+  height: 60px;
+  padding: 0 15px;
+  line-height: 50px;
+}
+
 .logo {
   width: 45px;
+  height: auto;
 }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Analogue Life</title>
+    <style>
+      h1 {
+        color: #d3a284;
+        background: linear-gradient(
+          109.6deg,
+          rgb(20, 30, 48) 11.2%,
+          rgb(36, 59, 85) 91.1%
+        );
+        text-align: center;
+        font-size: 35px;
+        line-height: 60px;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 10 auto;
+        margin: 35 auto;
+        border: none;
+        border-radius: 10px;
+      }
+
+      h2 {
+        color: #222831;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 500;
+        font-size: 21px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        max-width: 100%;
+        border-radius: 10px;
+        border: 1.5px solid #58727f;
+        padding: 3px 3px;
+        background-color: #e5e5e5;
+      }
+
+      p {
+        text-align: justify;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 20px;
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+
+      .intro-phrase {
+        font-weight: 600;
+        color: #393e46;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 25px 60px;
+        background: rgba(211, 162, 131, 0.2);
+        border-radius: 20px;
+      }
+
+      .learn-more {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #58727f;
+        text-align: center;
+        font-size: 13.5px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        display: block;
+        border: none;
+        border-radius: 15px;
+        background: #393e46;
+        color: #e5e5e5;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        padding: 15px 25px;
+        margin: 10px auto;
+        margin-bottom: 30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background: #e5e5e5;
+        border: 0.5px solid #393e46;
+        color: #58727f;
+        cursor: pointer;
+      }
+
+      .footer {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .coder {
+        text-decoration: none;
+        color: #58727f;
+        transition: all 200ms ease-in-out;
+      }
+
+      .coder:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Film Photography</h1>
+      <h2>Life of 35mm 🎞</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/074/239/original/E3EB0556-7BEB-4C74-B2D2-FA70F802250E.JPG?1680191294"
+        width="550"
+        alt="Windmill"
+      />
+      <hr />
+      <p>
+        <span class="intro-phrase"
+          >Before digital photography entered the scene</span
+        >, all photos were made with light-sensitive rolls of film. From there,
+        film photographers would develop the rolls and print their photos in a
+        darkroom; <em>a physical process</em> that lets artists get up close and
+        personal with photography as a medium. <br /><br />Film photography
+        gives you total control over <strong>image exposure</strong> and
+        <strong>shutter speed</strong> , and the ability to print and enlarge
+        images can help artists better understand how photos are made.
+      </p>
+      <a
+        href="https://www.adobe.com/creativecloud/photography/discover/film-photography.html"
+        target="_blank"
+        class="learn-more"
+        >Learn How to Shoot Film</a
+      >
+      <button>Subscribe</button>
+      <p class="footer">
+        Coded by
+        <a
+          href="https://www.shecodesfoundation.org/candidates/hazel-glaine-sales-filipino"
+          target="_blank"
+          class="coder"
+          >Hazel Sales</a
+        >
+      </p>
+    </div>
+    <script>
+      function updateHeading2(newHeading) {
+        let heading2 = document.querySelector("h2");
+        heading2.innerHTML = newHeading;
+      }
+
+      function notifyPrompt() {
+        let name = prompt("What is your name?");
+        let emailAdd = prompt("What is your e-mail address?");
+
+        if (name && emailAdd) {
+          updateHeading2(`<strong>Welcome to Life of 35mm 🎞 ${name}!</strong>`);
+        } else {
+          updateHeading2(
+            `<strong> Hey stranger, check on this page to know more about the Life of 35mm 🎞 </strong>!`
+          );
+        }
+      }
+
+      let subscribeButton = document.querySelector("button");
+      subscribeButton.addEventListener("click", notifyPrompt);
+    </script>
+  </body>
+</html>
